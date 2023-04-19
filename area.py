@@ -18,24 +18,27 @@ c=int(input())
 temp1=a
 temp2=b
 temp3=c
-if(a>b and a>c ):
-  a=temp1
-  if(b>c):
-    b=temp2
-    c=temp3
-  else:
-    b=temp3
-    c=temp2
+if(a>b):
+  if(a>c):
+    a=temp3
+    if(b>c):
+     b=temp2
+     c=temp1
+    else:
+     b=temp1
+     c=temp2
 else:
    if(b>c):
-    a=temp2
     if(a>c):
+      a=temp3
       b=temp1
-      c=temp3
+      c=temp2
     else:
-      c=temp1
+      a=temp1
       b=temp3
+      c=temp2
 print(a,b,c)    
+
 
 a=0
 b=1
