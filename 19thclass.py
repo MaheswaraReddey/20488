@@ -30,3 +30,21 @@ if(newnum==sum):
   print("An Armstrong Number")
 else:
   print("Not an Armstrong Number")
+
+
+
+x=int(input("Enter 1-triangle , 2-square , 3-rectangle "))
+if(x==1):
+    a=int(input("Base="))
+    b=int(input("Height="))
+    print("Area of triangle is ",0.5*a*b)
+if(x==2):
+    a=int(input("Side="))
+    print("Area of square is",a**2)
+if(x==3):
+    a=int(input("Length="))
+    b=int(input("Breadth="))
+    print("Area of rectangle is ",a*b)
+
+
+
