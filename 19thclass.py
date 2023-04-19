@@ -1,32 +1,32 @@
-# 5--->PROGRAM TO CHECK STRENGTH OF A PASSWORD 
-    # RULES: Atleast 1 lowercase alphabet
-             Atleast 1 uppercase alphabet
-             Contain more than 6 digits
-             Atleast 1 special character(@, #, $, %, &)
-             Length must be more than 8 characters
-pw=input("Enter a password:")
-count1=0
-count2=0
-count3=0
-count4=0
-if(len(pw)<=8):
- print("Password is too short!")
-for i in pw:
-  if(i.isupper()):
-    count1=count1+1
-  if(i.islower()):
-    count2=count2+1
-  if(i.isdigit()):
-    count3=count3+1
-  if(i=='@' or i=='#' or i=='$' or i=='%' or i=='&'):
-   count4=count4+1   
-if(count1==0):
-     print("Password must contain atleast one uppercase alphabet")
-if(count2==0):
-     print("Password must contain atleast one lowercase alphabet")
-if(count3<6):
-     print("Password must contain more than 6 digits")
-if(count4==0):
-     print("Password must contain atleast contain atleast one special character")
-if(count1!=0 and count2!=0 and count3>6 and count4!=0):
-  print("Password is strong !")
+n=5
+for i in range(1,n+1):
+ for j in range(1,i+1):
+   print(i,end="")
+ print("\n")
+
+num=int(input("Enter a number :"))
+rev=0
+rem=new=num
+while(num!=0):
+   rem=num%10
+   rev=rev*10+rem
+   num=num//10
+if(new==rev):
+  print("Given number is a Palindrome")
+else:
+  print("Given number is not a Palindrome")
+
+
+num=int(input("Enter a number :"))
+newnum=num
+rem=0
+sum=0
+count=len(str(num))
+while(num!=0):
+ rem=num%10
+ sum=sum+rem**count
+ num=num//10
+if(newnum==sum):
+  print("An Armstrong Number")
+else:
+  print("Not an Armstrong Number")
